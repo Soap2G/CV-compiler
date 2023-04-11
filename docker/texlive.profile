@@ -1,0 +1,11 @@
+selected_scheme scheme-full
+TEXDIR /usr/share/texlive/2020
+TEXMFLOCAL /usr/share/texlive/texmf-local
+TEXMFSYSCONFIG /usr/share/texlive/2020/texmf-config
+TEXMFSYSVAR /usr/share/texlive/2020/texmf-var
+TEXMFHOME ~/texmf
+TEXMFCONFIG ~/.texlive2020/texmf-config
+TEXMFVAR ~/.texlive2020/texmf-var
+tlpdbopt_generate_updmap 0
+tlpdbopt_install_docfiles 0
+tlpdbopt_install_srcfiles 0
