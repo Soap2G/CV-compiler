@@ -14,7 +14,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     container:
-      image: gitlab-registry.cern.ch/atlas-physics-office/gitlab-integration/pogitlab
+      image: texlive/texlive
 
     steps:
     - uses: actions/checkout@v3
