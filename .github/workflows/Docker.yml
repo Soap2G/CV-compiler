@@ -4,18 +4,20 @@ on:
   # Triggers the workflow on push or pull request events but only for the main branch
   push:
     paths:
-        - **Dockerfile
-        - **docker/*
+      - '**Dockerfile'
+      - '**docker/*'
     branches: [ main ]
   pull_request:
     paths:
-        - **Dockerfile
-        - **docker/*
+      paths:
+      - '**Dockerfile'
+      - '**docker/*'
     branches: [ main ]
   release:
     paths:
-        - **Dockerfile
-        - **docker/*
+      paths:
+      - '**Dockerfile'
+      - '**docker/*'
     types: [published]
 
 jobs:
