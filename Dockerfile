@@ -1,6 +1,8 @@
 FROM python:3.8-buster as installer
+ENV DEBIAN_FRONTEND=noninteractive
+USER root
 
-LABEL maintainer="Atlas Physics Office Developers <atlas-phys-office-developers>"
+LABEL maintainer="Giovanni Guerrieri"
 
 RUN apt-get update \
     && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
@@ -13,13 +15,13 @@ COPY ./docker/install-texlive.sh /root/install-texlive.sh
 
 WORKDIR /root
 
-RUN /root/install-texlive.sh
+RUN bash /root/install-texlive.sh
 
 ENV PATH="/usr/share/bin/x86_64-linux:$PATH"
 
 COPY ./docker/install-packages.sh /root/install-packages.sh
 
-RUN /root/install-packages.sh
+RUN bash /root/install-packages.sh
 
 RUN rm -rf /root/texlive.profile \
         /root/install-texlive.sh \
