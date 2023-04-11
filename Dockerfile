@@ -17,7 +17,7 @@ WORKDIR /root
 
 RUN bash /root/install-texlive.sh
 
-ENV PATH="/usr/share/bin/x86_64-linux:$PATH"
+ENV PATH="/usr/share/texlive/2020/bin/x86_64-linux:$PATH"
 
 COPY ./docker/install-packages.sh /root/install-packages.sh
 
