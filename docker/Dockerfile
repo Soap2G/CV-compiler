@@ -1,6 +1,4 @@
-ARG BASE_IMAGE=gitlab-registry.cern.ch/atlas-physics-office/gitlab-integration/pogitlab:latest
-
-FROM ${BASE_IMAGE} as installer
+FROM python:3.8-buster as installer
 
 LABEL maintainer="Atlas Physics Office Developers <atlas-phys-office-developers>"
 
