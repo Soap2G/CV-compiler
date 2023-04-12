@@ -1,4 +1,4 @@
-name: CMake
+name: Latex Make
 
 on:
   push:
@@ -19,6 +19,6 @@ jobs:
     steps:
     - uses: actions/checkout@v3
 
-    - name: Make
-      run: make
+    - name: Compile
+      run: pdflatex *.tex
 
