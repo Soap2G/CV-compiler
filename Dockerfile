@@ -8,6 +8,7 @@ RUN apt-get update \
     && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
         perl \
         ghostscript \
+        texlive-xetex \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 COPY ./docker/texlive.profile /root/texlive.profile
