@@ -21,6 +21,9 @@ jobs:
 
     - name: Compile
       run: xelatex *.tex
+      
+    - name: Archive artifacts
+      uses: actions/upload-artifact@v3
 
     - name: Download all workflow run artifacts
       uses: actions/download-artifact@v3
